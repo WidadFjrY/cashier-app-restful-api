@@ -27,10 +27,6 @@ func NewAuthMiddleware(handler http.Handler) *AuthMiddleware {
 }
 
 func (middleware AuthMiddleware) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
-	writer.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:5500")
-	writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	writer.Header().Set("Access-Control-Allow-Headers", "Content-Type")
-
 	url := request.URL.Path
 	fmt.Printf("\n")
 
