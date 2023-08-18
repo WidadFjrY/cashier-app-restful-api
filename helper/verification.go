@@ -9,7 +9,7 @@ import (
 
 func VerifikasiUserEmail(toEmail string, toName string, codeOTP string) {
 	url := "https://api.brevo.com/v3/smtp/email"
-	apiKey := "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"
+	apiKey := ""
 
 	// Escape variabel dalam konteks HTML
 	escapedToName := template.HTMLEscapeString(toName)
